@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.deliveries.NewDeliveriesActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="56dp"
+        android:text="@string/titre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    //Iaspyx
+
+    <ImageView
+        android:id="@+id/imvIaspyx"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sldIaspyx"
+        app:layout_constraintEnd_toStartOf="@+id/sldIaspyx"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sldIaspyx"
+        app:srcCompat="@drawable/i" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sldIaspyx"
+        android:layout_width="206dp"
+        android:layout_height="45dp"
+
+        android:valueFrom="0.0"
+        tools:valueTo="1.0"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTop"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/txtIaspyx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="@+id/sldIaspyx"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sldIaspyx"
+        app:layout_constraintTop_toTopOf="@+id/sldIaspyx"
+        tools:text="00000,00"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/iaspyx"
+        app:layout_constraintEnd_toEndOf="@+id/imvIaspyx"
+        app:layout_constraintStart_toStartOf="@+id/imvIaspyx"
+        app:layout_constraintTop_toBottomOf="@+id/imvIaspyx" />
+
+
+    //------------------------------------------------------------------
+
+    //Smiathil
+
+    <ImageView
+        android:id="@+id/imvSmiathil"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/sldSmiathil"
+        app:layout_constraintEnd_toStartOf="@+id/sldSmiathil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sldSmiathil"
+        app:srcCompat="@drawable/sm" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sldSmiathil"
+        android:layout_width="206dp"
+        android:layout_height="45dp"
+
+        android:valueFrom="0.0"
+        tools:valueTo="1.0"
+
+        app:layout_constraintBottom_toTopOf="@+id/sldJasmalt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sldIaspyx"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/txtSmiathil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="@+id/sldSmiathil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sldSmiathil"
+        app:layout_constraintTop_toTopOf="@+id/sldSmiathil"
+        tools:text="00000,00"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/smiathil"
+        app:layout_constraintEnd_toEndOf="@+id/imvSmiathil"
+        app:layout_constraintStart_toStartOf="@+id/imvSmiathil"
+        app:layout_constraintTop_toBottomOf="@+id/imvSmiathil" />
+
+    //------------------------------------------------------------------
+
+    //Jasmalt
+
+    <ImageView
+        android:id="@+id/imvJasmalt"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/sldJasmalt"
+        app:layout_constraintEnd_toStartOf="@+id/sldJasmalt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sldJasmalt"
+        app:srcCompat="@drawable/ja" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sldJasmalt"
+        android:layout_width="206dp"
+        android:layout_height="45dp"
+
+        android:valueFrom="0.0"
+        tools:valueTo="1.0"
+
+        app:layout_constraintBottom_toBottomOf="@+id/sldBilerium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTop"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/txtJasmalt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="@+id/sldJasmalt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sldJasmalt"
+        app:layout_constraintTop_toTopOf="@+id/sldJasmalt"
+        tools:text="00000,00"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/jasmalt"
+        app:layout_constraintEnd_toEndOf="@+id/imvJasmalt"
+        app:layout_constraintStart_toStartOf="@+id/imvJasmalt"
+        app:layout_constraintTop_toBottomOf="@+id/imvJasmalt" />
+
+    //------------------------------------------------------------------
+
+    //Vethyx
+
+    <ImageView
+        android:id="@+id/imvVethyx"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/sldVethyx"
+        app:layout_constraintEnd_toStartOf="@+id/sldVethyx"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sldVethyx"
+        app:srcCompat="@drawable/ve" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sldVethyx"
+        android:layout_width="206dp"
+        android:layout_height="45dp"
+
+        android:valueFrom="0.0"
+        tools:valueTo="1.0"
+
+        app:layout_constraintBottom_toTopOf="@+id/sldBilerium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sldJasmalt"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/txtVethyx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="@+id/sldVethyx"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sldVethyx"
+        app:layout_constraintTop_toTopOf="@+id/sldVethyx"
+        tools:text="00000,00"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/vethyx"
+        app:layout_constraintEnd_toEndOf="@+id/imvVethyx"
+        app:layout_constraintStart_toStartOf="@+id/imvVethyx"
+        app:layout_constraintTop_toBottomOf="@+id/imvVethyx" />
+
+    //------------------------------------------------------------------
+
+    //Bilerium
+
+    <ImageView
+        android:id="@+id/imvBilerium"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/sldBilerium"
+        app:layout_constraintEnd_toStartOf="@+id/sldBilerium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sldBilerium"
+        app:srcCompat="@drawable/b" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sldBilerium"
+        android:layout_width="206dp"
+        android:layout_height="45dp"
+
+        android:valueFrom="0.0"
+        tools:valueTo="1.0"
+
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/txtBilerium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="@+id/sldBilerium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sldBilerium"
+        app:layout_constraintTop_toTopOf="@+id/sldBilerium"
+        tools:text="00000,00"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/bilerium"
+        app:layout_constraintEnd_toEndOf="@+id/imvBilerium"
+        app:layout_constraintStart_toStartOf="@+id/imvBilerium"
+        app:layout_constraintTop_toBottomOf="@+id/imvBilerium" />
+
+    //------------------------------------------------------------------
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="110dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="600dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+
+        android:backgroundTint="@color/purple_500"
+        app:borderWidth="0dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_save_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

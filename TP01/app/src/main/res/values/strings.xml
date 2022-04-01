@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name" translatable="false">Consortium</string>
+    <string name="chargement">CHARGEMENT</string>
+    <string name="televerser">TÉLÉVERSER</string>
+    <string name="ouvrir">OUVRIR</string>
+    <string name="nom_de_commercant">Nom de commerçant</string>
+    <string name="nomErreur">Veuillez rentrer un nom de commerçant</string>
+
+    <string name="titre">Livraison</string>
+
+    <string name="iaspyx" translatable="false">Iaspyx</string>
+    <string name="smiathil" translatable="false">Smiathil</string>
+    <string name="jasmalt" translatable="false">Jasmalt</string>
+    <string name="vethyx" translatable="false">Vethyx</string>
+    <string name="bilerium" translatable="false">Bilerium</string>
+
+    <string name="livraisonErreur">Une livraison ne peut être vide</string>
+    <string name="deliveriesTitre">Bon retour %s</string>
+</resources>

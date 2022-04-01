@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="chargement">LOADING</string>
+    <string name="televerser">UPLOAD</string>
+    <string name="ouvrir">OPEN</string>
+    <string name="nom_de_commercant">Merchant name</string>
+    <string name="titre">Delivery</string>
+    <string name="nomErreur">"Please enter a merchant name "</string>
+    <string name="livraisonErreur">Une livraison ne peut être vide</string>
+    <string name="deliveriesTitre">Welcome back %s</string>
+</resources>

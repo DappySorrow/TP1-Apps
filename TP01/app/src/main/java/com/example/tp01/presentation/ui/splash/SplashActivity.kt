@@ -26,11 +26,11 @@ class SplashActivity : AppCompatActivity() {
 
             binding.tilNomCommercant.editText!!.setText(it.name)
 
-            binding.txtIaspyx.text = String.format("%.2f", it.iaspyx)
-            binding.txtSmiathil.text = String.format("%.2f", it.smiathil)
-            binding.txtJasmalt.text = String.format("%.2f", it.jasmalt)
-            binding.txtVethyx.text = String.format("%.2f", it.vethyx)
-            binding.txtBilerium.text = String.format("%.2f", it.bilerium)
+            binding.txtIaspyx.text = String.format("%.2f", it.iaspyx).replace(',', '.', true)
+            binding.txtSmiathil.text = String.format("%.2f", it.smiathil).replace(',', '.', true)
+            binding.txtJasmalt.text = String.format("%.2f", it.jasmalt).replace(',', '.', true)
+            binding.txtVethyx.text = String.format("%.2f", it.vethyx).replace(',', '.', true)
+            binding.txtBilerium.text = String.format("%.2f", it.bilerium).replace(',', '.', true)
         }
 
         ////////////////////////////////////////////////////////////////////////

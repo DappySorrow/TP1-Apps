@@ -21,17 +21,23 @@ class NewDeliveriesActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         viewModel.trader.observe(this) {
-            binding.txtIaspyx.text = String.format("%.2f", it.iaspyx)
-            binding.txtSmiathil.text = String.format("%.2f", it.smiathil)
-            binding.txtJasmalt.text = String.format("%.2f", it.jasmalt)
-            binding.txtVethyx.text = String.format("%.2f", it.vethyx)
-            binding.txtBilerium.text = String.format("%.2f", it.bilerium)
+            binding.txtIaspyx.text = String.format("%.2f", it.iaspyx).replace(',', '.', true)
+            binding.txtSmiathil.text = String.format("%.2f", it.smiathil).replace(',', '.', true)
+            binding.txtJasmalt.text = String.format("%.2f", it.jasmalt).replace(',', '.', true)
+            binding.txtVethyx.text = String.format("%.2f", it.vethyx).replace(',', '.', true)
+            binding.txtBilerium.text = String.format("%.2f", it.bilerium).replace(',', '.', true)
 
-            binding.sldIaspyx.valueTo = binding.txtIaspyx.text.toString().toFloat()
-            binding.sldSmiathil.valueTo = binding.txtSmiathil.text.toString().toFloat()
-            binding.sldJasmalt.valueTo = binding.txtJasmalt.text.toString().toFloat()
-            binding.sldVethyx.valueTo = binding.txtVethyx.text.toString().toFloat()
-            binding.sldBilerium.valueTo = binding.txtBilerium.text.toString().toFloat()
+            binding.sldIaspyx.valueTo =
+                binding.txtIaspyx.text.toString().replace(',', '.', true).toFloat()
+            binding.sldSmiathil.valueTo =
+                binding.txtSmiathil.text.toString().replace(',', '.', true).toFloat()
+            binding.sldJasmalt.valueTo =
+                binding.txtJasmalt.text.toString().replace(',', '.', true).toFloat()
+            binding.sldVethyx.valueTo =
+                binding.txtVethyx.text.toString().replace(',', '.', true).toFloat()
+            binding.sldBilerium.valueTo =
+                binding.txtBilerium.text.toString().replace(',', '.', true).toFloat()
+
 
             if (binding.sldIaspyx.valueTo == 0.01F) {
                 binding.sldIaspyx.isEnabled = false
@@ -64,16 +70,19 @@ class NewDeliveriesActivity : AppCompatActivity() {
                 binding.sldSmiathil.valueTo == 0.01F &&
                 binding.sldJasmalt.valueTo == 0.01F &&
                 binding.sldVethyx.valueTo == 0.01F &&
-                binding.sldBilerium.valueTo == 0.01F) {
+                binding.sldBilerium.valueTo == 0.01F
+            ) {
                 Toast.makeText(this, R.string.livraisonErreur, Toast.LENGTH_SHORT).show()
             } else {
                 //Créer une delivery
                 val delivery = Delivery(
-                    String.format("%.2f", iaspyx).toFloat(),
-                    String.format("%.2f", smiathil).toFloat(),
-                    String.format("%.2f", jasmalt).toFloat(),
-                    String.format("%.2f", vethyx).toFloat(),
-                    String.format("%.2f", bilerium).toFloat()
+
+                    String.format("%.2f", iaspyx).toString().replace(',', '.', true).toFloat(),
+                    String.format("%.2f", smiathil).toString().replace(',', '.', true).toFloat(),
+                    String.format("%.2f", jasmalt).toString().replace(',', '.', true).toFloat(),
+                    String.format("%.2f", vethyx).toString().replace(',', '.', true).toFloat(),
+                    String.format("%.2f", bilerium).toString().replace(',', '.', true).toFloat()
+
                 )
                 viewModel.addOne(delivery)
             }
